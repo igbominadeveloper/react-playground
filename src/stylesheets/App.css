@@ -1,0 +1,14 @@
+h1 {
+  text-align: center;
+}
+
+.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 60px auto;
+  width: 200px;
+}
+/*# sourceMappingURL=App.css.map */

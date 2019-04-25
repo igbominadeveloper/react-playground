@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,SAAS;CAAG",
+    "sources": [
+        "Punchbag.sass"
+    ],
+    "names": [],
+    "file": "Punchbag.css"
+}
