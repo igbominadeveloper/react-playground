@@ -20,6 +20,10 @@
       "npm run lint",
       "git add --force"
     ],
+    "*.jsx": [
+      "npm run lint",
+      "git add --force"
+    ],
     "*.json": [
       "prettier --write",
       "git add --force"
@@ -32,7 +36,7 @@
     "eject": "react-scripts eject",
     "check-staged": "lint-staged",
     "prettier": "prettier --write '**/*.{js,jsx}'",
-    "lint": "node_modules/eslint/bin/eslint.js src --fix"
+    "lint": "eslint src/**/*.js src/**/*.jsx --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,6 +56,7 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
     "husky": "^2.1.0",
     "lint-staged": "^8.1.5"
   }

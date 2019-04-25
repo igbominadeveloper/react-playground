@@ -6,7 +6,13 @@ import Button from './components/Button';
 import './stylesheets/App.css';
 
 class App extends Component {
-  state = {punchBag: {url:'https://cdn.shopify.com/s/files/1/1212/5824/products/Green_punch_bag_solid_logo_1024x1024.png?v=1505305327',class: 'healthy',},};
+  state = {
+    punchBag: {
+      url:
+        'https://cdn.shopify.com/s/files/1/1212/5824/products/Green_punch_bag_solid_logo_1024x1024.png?v=1505305327',
+      class: 'healthy',
+    },
+  };
 
   render() {
     return (

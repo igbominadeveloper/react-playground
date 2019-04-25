@@ -1,7 +1,0 @@
-{
-    "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 14,
-    "terminal.integrated.fontSize": 13,
-    "editor.scrollBeyondLastLine": false,
-    "editor.smoothScrolling": true
-}
