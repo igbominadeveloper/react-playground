@@ -39,33 +39,31 @@ class App extends Component {
   }
 
   reduceHealth = () => {
-    const { punchBag } = this.state;
+    const { punchBag } = { ...this.state };
+    punchBag.life > 0 && (punchBag.life -= 10);
 
-    punchBag.life > 0 && this.setState({ life: (punchBag.life -= 10) });
+    this.setState({ punchBag });
 
-    punchBag.life === 0 &&
-      this.setState({
-        changeImage: (punchBag.changeImage = true),
-      });
+    punchBag.life === 0 && (punchBag.changeImage = true);
+    this.setState({ punchBag });
   };
 
   refillHealth = () => {
-    const { punchBag } = this.state;
-
-    this.setState({
-      changeImage: (punchBag.changeImage = false),
-      life: (punchBag.life = 100),
-    });
+    const { punchBag } = { ...this.state };
+    punchBag.life = 100;
+    punchBag.changeImage = false;
+    this.setState({ punchBag });
   };
 
   togglePerson = () => {
-    const { showPerson } = this.state;
+    const { showPerson } = { ...this.state };
 
     this.setState({ showPerson: !showPerson });
   };
 
   deletePerson = index => {
-    const { persons } = this.state;
+    const { persons } = { ...this.state };
+
     persons.splice(index, 1);
     this.setState({ persons });
   };
