@@ -7,3 +7,9 @@ h1 {
   margin: 60px auto;
   width: 200px;
 }
+.person-container {
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
