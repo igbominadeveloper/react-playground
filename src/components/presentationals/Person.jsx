@@ -5,9 +5,9 @@ const propTypes = {
   person: PropTypes.object.isRequired,
 };
 
-function Person({ person = {} }) {
+function Person({ person }) {
   return (
-    <div>
+    <div key={person.id}>
       <p>{person.name}</p>
       <p>{person.email}</p>
       <p>{person.username}</p>

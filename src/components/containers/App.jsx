@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 import Punchbag from '../presentationals/Punchbag';
 import Health from '../presentationals/Health';
@@ -24,20 +24,18 @@ class App extends Component {
 
   async componentWillMount() {
     const { state } = this;
-    const { data } = await Axios.get(
+    const { data } = await axios.get(
       'https://jsonplaceholder.typicode.com/users/',
     );
     this.setState({ persons: (state.persons = data) });
   }
 
   componentDidMount() {
-    console.error('component mounted');
-    console.log(this.state.persons);
+    console.log('component mounted');
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(prevState);
-    console.error('component updated');
+    console.log('component updated');
   }
 
   reduceHealth = () => {
@@ -80,7 +78,13 @@ class App extends Component {
         </div>
         <h1>Author's Haven</h1>
         <button onClick={this.togglePerson}>toggle person</button>
-        <div>{showPerson && showPerson && <Person person={persons[0]} />}</div>
+        <div>
+          {showPerson &&
+            persons &&
+            persons.map(person => {
+              return <Person key={person.id} person={person} />;
+            })}
+        </div>
       </div>
     );
   }
