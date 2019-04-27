@@ -8,5 +8,7 @@
 .health-bar .health {
   background: green;
   height: 15px;
+  -webkit-transition: width 0.5s ease-in-out 0.2s;
+  transition: width 0.5s ease-in-out 0.2s;
 }
 /*# sourceMappingURL=Health.css.map */

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,MAAM,EAAE,cAAc;EACtB,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,SAAS;CAIE;;AARrB,AAME,WANS,CAMT,OAAO,CAAC;EACN,UAAU,EAAE,KAAK;EACjB,MAAM,EAAE,IAAI;CAAG",
-    "sources": [
-        "Health.sass"
-    ],
-    "names": [],
-    "file": "Health.css"
-}

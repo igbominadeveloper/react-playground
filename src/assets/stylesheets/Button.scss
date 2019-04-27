@@ -1,0 +1,21 @@
+.punch {
+  background: green;
+  color: white;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.reset {
+  background: orange;
+  color: white;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}

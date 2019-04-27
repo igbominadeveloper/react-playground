@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import '../stylesheets/Health.css';
+import '../../assets/stylesheets/Health.css';
 
 const propTypes = {
   life: PropTypes.number.isRequired,
 };
 
-const Health = props => {
+const Health = ({ life }) => {
   const style = {
-    width: props.life + '%',
+    width: life + '%',
+    background: life <= 30 ? 'red' : life <= 60 ? 'yellow' : 'green',
   };
 
   return (
