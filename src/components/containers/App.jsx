@@ -64,6 +64,12 @@ class App extends Component {
     this.setState({ showPerson: !showPerson });
   };
 
+  deletePerson = index => {
+    const { persons } = this.state;
+    persons.splice(index, 1);
+    this.setState({ persons });
+  };
+
   render() {
     const { punchBag, persons, showPerson } = this.state;
 
@@ -77,12 +83,22 @@ class App extends Component {
           <Button name="reset" className="reset" onClick={this.refillHealth} />
         </div>
         <h1>Author's Haven</h1>
-        <button onClick={this.togglePerson}>toggle person</button>
-        <div>
+        <button onClick={this.togglePerson}>
+          {showPerson ? 'hide persons' : 'show persons'}
+        </button>
+        <div className="person-container">
           {showPerson &&
             persons &&
-            persons.map(person => {
-              return <Person key={person.id} person={person} />;
+            persons.map((person, index) => {
+              return (
+                <Person
+                  key={index}
+                  person={person}
+                  clicked={() => {
+                    this.deletePerson(index);
+                  }}
+                />
+              );
             })}
         </div>
       </div>
